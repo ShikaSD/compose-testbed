@@ -1,0 +1,47 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../runtime-dispatch-js/1.0.0-alpha10/runtime-dispatch-js-1.0.0-alpha10.module",
+    "group": "androidx.compose.runtime",
+    "module": "runtime-dispatch-js",
+    "version": "1.0.0-alpha10",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.7",
+      "buildId:": "0"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.4.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-dispatch-metadata-1.0.0-alpha10.jar",
+          "url": "runtime-dispatch-metadata-1.0.0-alpha10.jar",
+          "size": 3077,
+          "sha512": "1bca3660819ed6605556d16dd7f0e7331c9061c296ead5f4812770e25318bf1cf5296434fd8719538da41f62ce0597a3233d2eae434036734a3855a65e02c1ed",
+          "sha256": "876f9f6e1fba123efd507e5b170de1d77459e4498ada5f9af71dd95bc5c345ef",
+          "sha1": "70be4b39ee4addf35b443191dc949f5e33806c01",
+          "md5": "abb4d8947014249b1f29b8adc34d6b02"
+        }
+      ]
+    }
+  ]
+}
