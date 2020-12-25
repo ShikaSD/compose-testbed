@@ -25,7 +25,7 @@
       "dependencies": [
         {
           "group": "androidx.compose.runtime",
-          "module": "runtime-dispatch",
+          "module": "runtime-dispatch-metadata",
           "version": {
             "requires": "1.0.0-alpha10"
           }

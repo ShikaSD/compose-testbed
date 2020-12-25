@@ -1,10 +1,17 @@
 plugins {
-    id("org.jetbrains.kotlin.js") version "1.4.21"
+    kotlin("js")
 }
 
 repositories {
     jcenter()
-    maven(url = File(projectDir, "libs").toURI().toString())
+    libsRepository(rootDir)
+}
+
+subprojects {
+    repositories {
+        jcenter()
+        libsRepository(rootDir)
+    }
 }
 
 kotlin {
@@ -26,20 +33,13 @@ kotlin {
             }
         }
         binaries.executable()
-
-        compilations.forEach {
-            it.kotlinOptions.freeCompilerArgs += listOf(
-                "-Xopt-in=kotlin.RequiresOptIn",
-                "-P", "plugin:androidx.compose.compiler.plugins.kotlin:generateDecoys=true"
-            )
-        }
     }
 }
 
-dependencies {
-    kotlinCompilerPluginClasspath(files("libs/embedded.jar"))
+configureComposeCompiler()
 
-    implementation("androidx.compose.runtime:runtime-js:1.0.0-alpha10")
-    implementation(kotlin("stdlib-js"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1")
+dependencies {
+    implementation(project(":prelude"))
+    implementation(composeRuntimeJs())
 }
+
