@@ -2,20 +2,17 @@ package compose.web
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.emit
+import compose.web.internal.JsApplier
+import compose.web.internal.NodeWrapper
 import kotlinx.browser.document
-import org.w3c.dom.Node
 import org.w3c.dom.Text
-import org.w3c.dom.events.Event
 
 @Composable
-fun tag(name: String, onClick: ((Event) -> Unit)? = null, content: @Composable () -> Unit) {
-    emit<Node, JsApplier>(
-        ctor = { document.createElement(name) },
+fun tag(modifier: Modifier, tagName: String, content: @Composable () -> Unit) {
+    emit<NodeWrapper, JsApplier>(
+        ctor = { NodeWrapper(tagName) },
         update = {
-            set(onClick) { listener ->
-                // todo clear as well
-                addEventListener("click", listener)
-            }
+            set(modifier) { this.modifier = modifier }
         },
         content = content
     )
@@ -23,12 +20,13 @@ fun tag(name: String, onClick: ((Event) -> Unit)? = null, content: @Composable (
 
 @Composable
 fun text(value: String) {
-    emit<Node, JsApplier>(
-        ctor = { document.createTextNode("") },
+    emit<NodeWrapper, JsApplier>(
+        ctor = { NodeWrapper(document.createTextNode("")) },
         update = {
             set(value) { value ->
-                (this as Text).data = value
+                (realNode as Text).data = value
             }
         },
     )
 }
+

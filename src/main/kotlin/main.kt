@@ -4,7 +4,7 @@ import androidx.compose.runtime.ExperimentalComposeApi
 import androidx.compose.runtime.Recomposer
 import androidx.compose.runtime.compositionFor
 import compose.web.GlobalSnapshotManager
-import compose.web.JsApplier
+import compose.web.internal.JsApplier
 import kotlinx.browser.document
 
 fun main() {

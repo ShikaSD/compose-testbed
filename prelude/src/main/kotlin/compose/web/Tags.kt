@@ -1,20 +1,19 @@
 package compose.web
 
 import androidx.compose.runtime.Composable
-import org.w3c.dom.events.Event
 
 @Composable
-fun h1(content: @Composable () -> Unit) {
-    tag("h1", content = content)
+fun h1(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    tag(modifier, "h1", content = content)
 }
 
 @Composable
-fun h2(content: @Composable () -> Unit) {
-    tag("h2", content = content)
+fun h2(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    tag(modifier,"h2", content = content)
 }
 
 @Composable
-fun button(onClick: (Event) -> Unit, content: @Composable () -> Unit) {
-    tag("button", onClick, content = content)
+fun button(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    tag(modifier,"button", content = content)
 }
 
