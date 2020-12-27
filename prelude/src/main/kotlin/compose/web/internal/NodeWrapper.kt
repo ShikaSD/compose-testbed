@@ -3,6 +3,7 @@ package compose.web.internal
 import compose.web.CssModifier
 import compose.web.EventModifier
 import compose.web.Modifier
+import compose.web.PropertyModifier
 import kotlinx.browser.document
 import org.w3c.dom.Element
 import org.w3c.dom.HTMLElement
@@ -14,6 +15,7 @@ class NodeWrapper internal constructor(internal val realNode: Node) {
 
     private val eventModifiers = mutableListOf<EventModifier>()
     private val cssModifiers = mutableListOf<CssModifier>()
+    private val propertyModifiers = mutableListOf<PropertyModifier<*>>()
 
     internal var modifier: Modifier = Modifier
         set(value) {
@@ -31,6 +33,8 @@ class NodeWrapper internal constructor(internal val realNode: Node) {
 
         element.style.cssText = ""
         cssModifiers.clear()
+        // todo: unapply?
+        propertyModifiers.clear()
 
         modifier.foldOut(Unit) { mod, _ ->
             if (mod is CssModifier) {
@@ -39,10 +43,18 @@ class NodeWrapper internal constructor(internal val realNode: Node) {
             if (mod is EventModifier) {
                 eventModifiers.add(mod)
             }
+            if (mod is PropertyModifier<*>) {
+                propertyModifiers.add(mod)
+            }
         }
 
         eventModifiers.forEach {
             element.addEventListener(it.eventName, it.listener)
+        }
+        propertyModifiers.forEach {
+            // not type safe :(
+            it as PropertyModifier<HTMLElement>
+            element.apply(it.configure)
         }
         cssModifiers.forEach {
             element.style.apply(it.configure)
