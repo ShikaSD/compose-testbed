@@ -46,7 +46,7 @@ fun App() {
 
     text(inputState)
 
-    var canvas: HTMLElement? by mutableStateOf(null)
+    var canvas: HTMLElement? by remember { mutableStateOf(null) }
     canvas(Modifier.ref { canvas = it }, width = 300, height = 150)
 
     console.log(canvas)
