@@ -4,6 +4,7 @@ import compose.web.CssModifier
 import compose.web.EventModifier
 import compose.web.Modifier
 import compose.web.PropertyModifier
+import compose.web.RefModifier
 import kotlinx.browser.document
 import org.w3c.dom.Element
 import org.w3c.dom.HTMLElement
@@ -30,21 +31,19 @@ class NodeWrapper internal constructor(internal val realNode: Node) {
             element.removeEventListener(it.eventName, it.listener)
         }
         eventModifiers.clear()
-
-        element.style.cssText = ""
+        if (element.style.length > 0) {
+            element.style.cssText = ""
+        }
         cssModifiers.clear()
         // todo: unapply?
         propertyModifiers.clear()
 
         modifier.foldOut(Unit) { mod, _ ->
-            if (mod is CssModifier) {
-                cssModifiers.add(mod)
-            }
-            if (mod is EventModifier) {
-                eventModifiers.add(mod)
-            }
-            if (mod is PropertyModifier<*>) {
-                propertyModifiers.add(mod)
+            when (mod) {
+                is CssModifier -> cssModifiers.add(mod)
+                is EventModifier -> eventModifiers.add(mod)
+                is PropertyModifier<*> -> propertyModifiers.add(mod)
+                is RefModifier -> mod.configure(element)
             }
         }
 

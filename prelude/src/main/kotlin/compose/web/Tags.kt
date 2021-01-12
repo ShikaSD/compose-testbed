@@ -24,6 +24,11 @@ fun input(modifier: Modifier = Modifier, content: @Composable() () -> Unit = emp
 }
 
 @Composable
+fun canvas(modifier: Modifier = Modifier, width: Int, height: Int) {
+    tag(modifier = modifier.width(width).height(height), tagName = "canvas", content = emptyContent())
+}
+
+@Composable
 fun br() {
     tag(modifier = Modifier, tagName = "br", content = emptyContent())
 }

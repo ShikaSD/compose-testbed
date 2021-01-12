@@ -20,6 +20,11 @@ internal class CssModifier(val configure: CSSStyleDeclaration.() -> Unit) : Modi
  */
 internal class PropertyModifier<R : HTMLElement>(val configure: R.() -> Unit): Modifier.Element
 
+/**
+ * Provides access to underlying HTML element
+ */
+internal class RefModifier(val configure: HTMLElement.() -> Unit): Modifier.Element
+
 fun Modifier.css(configure: CSSStyleDeclaration.() -> Unit): Modifier =
     this.then(CssModifier(configure))
 
@@ -28,3 +33,6 @@ fun Modifier.event(eventName: String, listener: EventListener) : Modifier =
 
 fun <R : HTMLElement> Modifier.property(configure: R.() -> Unit) : Modifier =
     this.then(PropertyModifier(configure))
+
+fun Modifier.ref(block: (HTMLElement) -> Unit): Modifier =
+    this.then(RefModifier(block))
