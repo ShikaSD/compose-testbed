@@ -1,17 +1,17 @@
 {
   "formatVersion": "1.1",
   "component": {
-    "url": "../../runtime-dispatch/1.0.0-alpha10/runtime-dispatch-1.0.0-alpha10.module",
+    "url": "../../runtime-dispatch/1.0.0-alpha11/runtime-dispatch-1.0.0-alpha11.module",
     "group": "androidx.compose.runtime",
     "module": "runtime-dispatch",
-    "version": "1.0.0-alpha10",
+    "version": "1.0.0-alpha11",
     "attributes": {
       "org.gradle.status": "release"
     }
   },
   "createdBy": {
     "gradle": {
-      "version": "6.7",
+      "version": "6.7.1",
       "buildId:": "0"
     }
   },
@@ -41,13 +41,13 @@
       ],
       "files": [
         {
-          "name": "runtime-dispatch-js-1.0.0-alpha10.klib",
-          "url": "runtime-dispatch-js-1.0.0-alpha10.klib",
-          "size": 14333,
-          "sha512": "a1882a0e93053aa1d6ad85e6beb3bd9156102d2eb4a6db68c2e0c9a9037bf5d7cbc5f3ac1bd48420987003bf2216ecfb995bbb5f708c8bfb205e1ba1c170a340",
-          "sha256": "752b46e9fbf5534deeeeaae0fbb13a6358c84d9be5131d992f6f4a9709d6cc85",
-          "sha1": "13f9efeade9db84a743d4f1e12982c0dd8b75f04",
-          "md5": "361231d1e0e391eab9f4d0443669be3e"
+          "name": "runtime-dispatch-js-1.0.0-alpha11.klib",
+          "url": "runtime-dispatch-js-1.0.0-alpha11.klib",
+          "size": 15622,
+          "sha512": "795299795f9e700be3c41352f6575d4c14da94670ff378a04e3e6ace16ee12874d7d31b1b5d57bd342ccd2a7fdf569c72dbb03d0a28a7941ca455a9a89141cc0",
+          "sha256": "90bfd58a9d6e7f119426872ca3e78332bdbac8a37c8c1ec4f0e9a778cc420858",
+          "sha1": "ea66fc9139d5e490cc8a594d3c226b15c71c924f",
+          "md5": "c9cdd444cc70b433f0c9d4f2b2e9cbd1"
         }
       ]
     },
@@ -76,13 +76,13 @@
       ],
       "files": [
         {
-          "name": "runtime-dispatch-js-1.0.0-alpha10.klib",
-          "url": "runtime-dispatch-js-1.0.0-alpha10.klib",
-          "size": 14333,
-          "sha512": "a1882a0e93053aa1d6ad85e6beb3bd9156102d2eb4a6db68c2e0c9a9037bf5d7cbc5f3ac1bd48420987003bf2216ecfb995bbb5f708c8bfb205e1ba1c170a340",
-          "sha256": "752b46e9fbf5534deeeeaae0fbb13a6358c84d9be5131d992f6f4a9709d6cc85",
-          "sha1": "13f9efeade9db84a743d4f1e12982c0dd8b75f04",
-          "md5": "361231d1e0e391eab9f4d0443669be3e"
+          "name": "runtime-dispatch-js-1.0.0-alpha11.klib",
+          "url": "runtime-dispatch-js-1.0.0-alpha11.klib",
+          "size": 15622,
+          "sha512": "795299795f9e700be3c41352f6575d4c14da94670ff378a04e3e6ace16ee12874d7d31b1b5d57bd342ccd2a7fdf569c72dbb03d0a28a7941ca455a9a89141cc0",
+          "sha256": "90bfd58a9d6e7f119426872ca3e78332bdbac8a37c8c1ec4f0e9a778cc420858",
+          "sha1": "ea66fc9139d5e490cc8a594d3c226b15c71c924f",
+          "md5": "c9cdd444cc70b433f0c9d4f2b2e9cbd1"
         }
       ]
     },
@@ -93,10 +93,10 @@
         "org.jetbrains.kotlin.platform.type": "common"
       },
       "available-at": {
-        "url": "../../runtime-dispatch-metadata/1.0.0-alpha10/runtime-dispatch-metadata-1.0.0-alpha10.module",
+        "url": "../../runtime-dispatch-metadata/1.0.0-alpha11/runtime-dispatch-metadata-1.0.0-alpha11.module",
         "group": "androidx.compose.runtime",
         "module": "runtime-dispatch-metadata",
-        "version": "1.0.0-alpha10"
+        "version": "1.0.0-alpha11"
       }
     }
   ]

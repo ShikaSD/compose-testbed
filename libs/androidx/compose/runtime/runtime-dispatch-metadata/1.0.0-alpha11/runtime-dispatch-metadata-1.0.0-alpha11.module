@@ -1,17 +1,17 @@
 {
   "formatVersion": "1.1",
   "component": {
-    "url": "../../runtime-dispatch-js/1.0.0-alpha10/runtime-dispatch-js-1.0.0-alpha10.module",
+    "url": "../../runtime-dispatch-js/1.0.0-alpha11/runtime-dispatch-js-1.0.0-alpha11.module",
     "group": "androidx.compose.runtime",
     "module": "runtime-dispatch-js",
-    "version": "1.0.0-alpha10",
+    "version": "1.0.0-alpha11",
     "attributes": {
       "org.gradle.status": "release"
     }
   },
   "createdBy": {
     "gradle": {
-      "version": "6.7",
+      "version": "6.7.1",
       "buildId:": "0"
     }
   },
@@ -33,13 +33,13 @@
       ],
       "files": [
         {
-          "name": "runtime-dispatch-metadata-1.0.0-alpha10.jar",
-          "url": "runtime-dispatch-metadata-1.0.0-alpha10.jar",
-          "size": 3077,
-          "sha512": "1bca3660819ed6605556d16dd7f0e7331c9061c296ead5f4812770e25318bf1cf5296434fd8719538da41f62ce0597a3233d2eae434036734a3855a65e02c1ed",
-          "sha256": "876f9f6e1fba123efd507e5b170de1d77459e4498ada5f9af71dd95bc5c345ef",
-          "sha1": "70be4b39ee4addf35b443191dc949f5e33806c01",
-          "md5": "abb4d8947014249b1f29b8adc34d6b02"
+          "name": "runtime-dispatch-metadata-1.0.0-alpha11.jar",
+          "url": "runtime-dispatch-metadata-1.0.0-alpha11.jar",
+          "size": 3173,
+          "sha512": "82b58cef5a16fa80a31e5ab372f180679b18ec985bf920dc952cebd72acc8274743942681fded3aab5a47675069b79e16fb85d627ae43389cf61bb52508f0f13",
+          "sha256": "62a6e364f8308d0a28d4dfe8eb2740ec0498819a767d463edba41c099f354669",
+          "sha1": "132d2dae30f0f8f4c22c8c006544db7b0bbd3862",
+          "md5": "8b47eb935331886e356608144d1e342c"
         }
       ]
     }
