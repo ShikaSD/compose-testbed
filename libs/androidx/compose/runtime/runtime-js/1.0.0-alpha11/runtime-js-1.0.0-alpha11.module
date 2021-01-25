@@ -1,17 +1,17 @@
 {
   "formatVersion": "1.1",
   "component": {
-    "url": "../../runtime/1.0.0-alpha10/runtime-1.0.0-alpha10.module",
+    "url": "../../runtime/1.0.0-alpha11/runtime-1.0.0-alpha11.module",
     "group": "androidx.compose.runtime",
     "module": "runtime",
-    "version": "1.0.0-alpha10",
+    "version": "1.0.0-alpha11",
     "attributes": {
       "org.gradle.status": "release"
     }
   },
   "createdBy": {
     "gradle": {
-      "version": "6.7",
+      "version": "6.7.1",
       "buildId:": "0"
     }
   },
@@ -26,9 +26,9 @@
       "dependencies": [
         {
           "group": "androidx.compose.runtime",
-          "module": "runtime-dispatch-js",
+          "module": "runtime-dispatch",
           "version": {
-            "requires": "1.0.0-alpha10"
+            "requires": "1.0.0-alpha11"
           }
         },
         {
@@ -55,13 +55,13 @@
       ],
       "files": [
         {
-          "name": "runtime-js-1.0.0-alpha10.klib",
-          "url": "runtime-js-1.0.0-alpha10.klib",
-          "size": 576885,
-          "sha512": "e0ca270a10f48684d926076c7c389d0033afd82b22b2cdd59dc529c4bfaf93b44de4ed88b2531a225319c427ba4a98e40a585988f2e4e437b6da3560c051d9fe",
-          "sha256": "584d40c3aa38776fb7895366253971deafb491efa72cdb4d01724f681e99b9c4",
-          "sha1": "3f5984e217f3abd525baf9a6622a37a8a1206b7b",
-          "md5": "95145c41b531cbd24bfd3fa283f864b9"
+          "name": "runtime-js-1.0.0-alpha11.klib",
+          "url": "runtime-js-1.0.0-alpha11.klib",
+          "size": 584855,
+          "sha512": "287cb6f26a19c28b1946f0fa8ec03bff0b58e820d2c803687854a709e52336a725e232038cb9ab630d8e3240532bc662d2053c951b2adf906b774085693b9da2",
+          "sha256": "6b9d015c8e30a02a3f2a4e951fe5643289cf2a547049dc8e91b10d3b71e1b263",
+          "sha1": "f62e69f113c91e27c062724217d1969cf5e18729",
+          "md5": "8c44d9d87aa691fbd15c516ea7111806"
         }
       ]
     },
@@ -75,9 +75,9 @@
       "dependencies": [
         {
           "group": "androidx.compose.runtime",
-          "module": "runtime-dispatch-js",
+          "module": "runtime-dispatch",
           "version": {
-            "requires": "1.0.0-alpha10"
+            "requires": "1.0.0-alpha11"
           }
         },
         {
@@ -104,13 +104,13 @@
       ],
       "files": [
         {
-          "name": "runtime-js-1.0.0-alpha10.klib",
-          "url": "runtime-js-1.0.0-alpha10.klib",
-          "size": 576885,
-          "sha512": "e0ca270a10f48684d926076c7c389d0033afd82b22b2cdd59dc529c4bfaf93b44de4ed88b2531a225319c427ba4a98e40a585988f2e4e437b6da3560c051d9fe",
-          "sha256": "584d40c3aa38776fb7895366253971deafb491efa72cdb4d01724f681e99b9c4",
-          "sha1": "3f5984e217f3abd525baf9a6622a37a8a1206b7b",
-          "md5": "95145c41b531cbd24bfd3fa283f864b9"
+          "name": "runtime-js-1.0.0-alpha11.klib",
+          "url": "runtime-js-1.0.0-alpha11.klib",
+          "size": 584855,
+          "sha512": "287cb6f26a19c28b1946f0fa8ec03bff0b58e820d2c803687854a709e52336a725e232038cb9ab630d8e3240532bc662d2053c951b2adf906b774085693b9da2",
+          "sha256": "6b9d015c8e30a02a3f2a4e951fe5643289cf2a547049dc8e91b10d3b71e1b263",
+          "sha1": "f62e69f113c91e27c062724217d1969cf5e18729",
+          "md5": "8c44d9d87aa691fbd15c516ea7111806"
         }
       ]
     },
@@ -121,10 +121,10 @@
         "org.jetbrains.kotlin.platform.type": "common"
       },
       "available-at": {
-        "url": "../../runtime-metadata/1.0.0-alpha10/runtime-metadata-1.0.0-alpha10.module",
+        "url": "../../runtime-metadata/1.0.0-alpha11/runtime-metadata-1.0.0-alpha11.module",
         "group": "androidx.compose.runtime",
         "module": "runtime-metadata",
-        "version": "1.0.0-alpha10"
+        "version": "1.0.0-alpha11"
       }
     }
   ]
