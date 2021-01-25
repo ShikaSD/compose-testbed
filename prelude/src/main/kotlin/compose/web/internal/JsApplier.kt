@@ -3,7 +3,7 @@ package compose.web.internal
 import androidx.compose.runtime.AbstractApplier
 import org.w3c.dom.Node
 
-class JsApplier(root: Node) : AbstractApplier<NodeWrapper>(NodeWrapper(root)) {
+internal class JsApplier(root: Node) : AbstractApplier<NodeWrapper>(NodeWrapper(root)) {
     override fun onClear() {
         // no-op
     }

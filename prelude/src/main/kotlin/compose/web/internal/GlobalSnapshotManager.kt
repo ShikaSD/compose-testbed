@@ -1,10 +1,9 @@
-package compose.web
+package compose.web.internal
 
 import androidx.compose.runtime.ExperimentalComposeApi
 import androidx.compose.runtime.snapshots.Snapshot
 import androidx.compose.runtime.snapshots.SnapshotWriteObserver
-import compose.web.GlobalSnapshotManager.ensureStarted
-import kotlinx.atomicfu.atomic
+import compose.web.internal.GlobalSnapshotManager.ensureStarted
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -19,8 +18,8 @@ import kotlinx.coroutines.launch
  * Composition bootstrapping mechanisms for a particular platform/framework should call
  * [ensureStarted] during setup to initialize periodic global snapshot notifications.
  */
-object GlobalSnapshotManager {
-    private val started = atomic(false)
+internal object GlobalSnapshotManager {
+    private var started = false
     private var commitPending = false
     private var removeWriteObserver: (() -> Unit)? = null
 
@@ -28,7 +27,8 @@ object GlobalSnapshotManager {
 
     @OptIn(ExperimentalComposeApi::class)
     fun ensureStarted() {
-        if (started.compareAndSet(false, true)) {
+        if (!started) {
+            started = true
             removeWriteObserver = Snapshot.registerGlobalWriteObserver(globalWriteObserver)
         }
     }
@@ -60,20 +60,16 @@ object GlobalSnapshotManager {
      * consistent, updated state.
      */
     private fun synchronize() {
-        synchronized(scheduledCallbacks) {
-            scheduledCallbacks.forEach { it.invoke() }
-            scheduledCallbacks.clear()
-            isSynchronizeScheduled = false
-        }
+        scheduledCallbacks.forEach { it.invoke() }
+        scheduledCallbacks.clear()
+        isSynchronizeScheduled = false
     }
 
     private fun schedule(block: () -> Unit) {
-        synchronized(scheduledCallbacks) {
-            scheduledCallbacks.add(block)
-            if (!isSynchronizeScheduled) {
-                isSynchronizeScheduled = true
-                scheduleScope.launch { synchronize() }
-            }
+        scheduledCallbacks.add(block)
+        if (!isSynchronizeScheduled) {
+            isSynchronizeScheduled = true
+            scheduleScope.launch { synchronize() }
         }
     }
 }

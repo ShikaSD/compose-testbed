@@ -18,7 +18,7 @@ internal class CssModifier(val configure: CSSStyleDeclaration.() -> Unit) : Modi
  * Updates target node properties on recomposition
  * Properties are not cleared automatically (yet) when modifier is removed
  */
-internal class PropertyModifier<R : HTMLElement>(val configure: R.() -> Unit): Modifier.Element
+internal class PropertyModifier(val configure: HTMLElement.() -> Unit): Modifier.Element
 
 /**
  * Provides access to underlying HTML element
@@ -31,8 +31,9 @@ fun Modifier.css(configure: CSSStyleDeclaration.() -> Unit): Modifier =
 fun Modifier.event(eventName: String, listener: EventListener) : Modifier =
     this.then(EventModifier(eventName, listener))
 
+@Suppress("UNCHECKED_CAST")
 fun <R : HTMLElement> Modifier.property(configure: R.() -> Unit) : Modifier =
-    this.then(PropertyModifier(configure))
+    this.then(PropertyModifier(configure as HTMLElement.() -> Unit))
 
 fun Modifier.ref(block: (HTMLElement) -> Unit): Modifier =
     this.then(RefModifier(block))

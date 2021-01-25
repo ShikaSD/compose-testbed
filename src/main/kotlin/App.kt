@@ -6,16 +6,17 @@ import androidx.compose.runtime.setValue
 import compose.web.Modifier
 import compose.web.button
 import compose.web.canvas
-import compose.web.click
+import compose.web.component.Checkbox
+import compose.web.component.CheckboxState
+import compose.web.component.InputState
+import compose.web.component.TextInput
 import compose.web.css
 import compose.web.h1
 import compose.web.h2
-import compose.web.input
+import compose.web.onClick
 import compose.web.ref
 import compose.web.text
-import compose.web.value
 import org.w3c.dom.HTMLElement
-import org.w3c.dom.HTMLInputElement
 
 @Composable
 fun App() {
@@ -29,7 +30,7 @@ fun App() {
         text("Counter: ${counter}")
     }
 
-    button(Modifier.click { counter++ }) {
+    button(Modifier.onClick { counter++ }) {
         text("Increment!")
     }
 
@@ -37,17 +38,15 @@ fun App() {
         text("Input something below")
     }
 
-    var inputState by remember { mutableStateOf("") }
-    input(
-        modifier = Modifier
-            .value(inputState)
-            .input { inputState = (it.target as? HTMLInputElement)?.value.orEmpty() }
-    )
+    val inputState = remember { InputState("") }
+    TextInput(state = inputState)
 
-    text(inputState)
+    val checkboxState = remember { CheckboxState(false) }
+
+    Checkbox(state = checkboxState)
+
+    text("input value: ${inputState.value}, checkbox checked: ${checkboxState.value}")
 
     var canvas: HTMLElement? by remember { mutableStateOf(null) }
     canvas(Modifier.ref { canvas = it }, width = 300, height = 150)
-
-    console.log(canvas)
 }

@@ -11,52 +11,34 @@ import org.w3c.dom.HTMLElement
 import org.w3c.dom.Node
 import org.w3c.dom.get
 
-class NodeWrapper internal constructor(internal val realNode: Node) {
+internal class NodeWrapper internal constructor(internal val realNode: Node) {
     internal constructor(tagName: String) : this(document.createElement(tagName))
-
-    private val eventModifiers = mutableListOf<EventModifier>()
-    private val cssModifiers = mutableListOf<CssModifier>()
-    private val propertyModifiers = mutableListOf<PropertyModifier<*>>()
 
     internal var modifier: Modifier = Modifier
         set(value) {
-            updateModifier(value)
+            updateModifier(previous = field, next = value)
             field = value
         }
 
-    private fun updateModifier(modifier: Modifier) {
+    private fun updateModifier(previous: Modifier, next: Modifier) {
         val element = realNode as HTMLElement
 
-        eventModifiers.forEach {
-            element.removeEventListener(it.eventName, it.listener)
+        previous.foldOut(Unit) { mod, _ ->
+            if (mod is EventModifier) {
+                element.removeEventListener(mod.eventName, mod.listener)
+            }
         }
-        eventModifiers.clear()
         if (element.style.length > 0) {
             element.style.cssText = ""
         }
-        cssModifiers.clear()
-        // todo: unapply?
-        propertyModifiers.clear()
 
-        modifier.foldOut(Unit) { mod, _ ->
+        next.foldOut(Unit) { mod, _ ->
             when (mod) {
-                is CssModifier -> cssModifiers.add(mod)
-                is EventModifier -> eventModifiers.add(mod)
-                is PropertyModifier<*> -> propertyModifiers.add(mod)
+                is CssModifier -> element.style.apply(mod.configure)
+                is EventModifier -> element.addEventListener(mod.eventName, mod.listener)
+                is PropertyModifier -> element.apply(mod.configure)
                 is RefModifier -> mod.configure(element)
             }
-        }
-
-        eventModifiers.forEach {
-            element.addEventListener(it.eventName, it.listener)
-        }
-        propertyModifiers.forEach {
-            // not type safe :(
-            it as PropertyModifier<HTMLElement>
-            element.apply(it.configure)
-        }
-        cssModifiers.forEach {
-            element.style.apply(it.configure)
         }
     }
 

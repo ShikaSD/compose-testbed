@@ -5,11 +5,11 @@ import org.w3c.dom.events.EventListener
 import org.w3c.dom.events.InputEvent
 import org.w3c.dom.events.KeyboardEvent
 
-fun Modifier.click(action: (Event) -> Unit): Modifier =
+fun Modifier.onClick(action: (Event) -> Unit): Modifier =
     event("click", EventListener(action))
 
-fun Modifier.input(action: (InputEvent) -> Unit): Modifier =
+fun Modifier.onInput(action: (InputEvent) -> Unit): Modifier =
     event("input", EventListener { action(it as InputEvent) })
 
-fun Modifier.keyup(action: (KeyboardEvent) -> Unit): Modifier =
+fun Modifier.onKeyUp(action: (KeyboardEvent) -> Unit): Modifier =
     event("keyup", EventListener { action(it as KeyboardEvent) })
