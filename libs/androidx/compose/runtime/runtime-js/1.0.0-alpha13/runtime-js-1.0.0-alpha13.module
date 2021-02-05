@@ -1,17 +1,17 @@
 {
   "formatVersion": "1.1",
   "component": {
-    "url": "../../runtime/1.0.0-alpha11/runtime-1.0.0-alpha11.module",
+    "url": "../../runtime/1.0.0-alpha13/runtime-1.0.0-alpha13.module",
     "group": "androidx.compose.runtime",
     "module": "runtime",
-    "version": "1.0.0-alpha11",
+    "version": "1.0.0-alpha13",
     "attributes": {
       "org.gradle.status": "release"
     }
   },
   "createdBy": {
     "gradle": {
-      "version": "6.7.1",
+      "version": "6.8.1",
       "buildId:": "0"
     }
   },
@@ -25,17 +25,17 @@
       },
       "dependencies": [
         {
-          "group": "androidx.compose.runtime",
-          "module": "runtime-dispatch",
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
           "version": {
-            "requires": "1.0.0-alpha11"
+            "requires": "1.4.30"
           }
         },
         {
           "group": "org.jetbrains.kotlin",
           "module": "kotlin-stdlib-common",
           "version": {
-            "requires": "1.4.21"
+            "requires": "1.4.30"
           }
         },
         {
@@ -55,13 +55,13 @@
       ],
       "files": [
         {
-          "name": "runtime-js-1.0.0-alpha11.klib",
-          "url": "runtime-js-1.0.0-alpha11.klib",
-          "size": 584855,
-          "sha512": "287cb6f26a19c28b1946f0fa8ec03bff0b58e820d2c803687854a709e52336a725e232038cb9ab630d8e3240532bc662d2053c951b2adf906b774085693b9da2",
-          "sha256": "6b9d015c8e30a02a3f2a4e951fe5643289cf2a547049dc8e91b10d3b71e1b263",
-          "sha1": "f62e69f113c91e27c062724217d1969cf5e18729",
-          "md5": "8c44d9d87aa691fbd15c516ea7111806"
+          "name": "runtime-js-1.0.0-alpha13.klib",
+          "url": "runtime-js-1.0.0-alpha13.klib",
+          "size": 546234,
+          "sha512": "ef1111df55fbe3c163c232339016950a2a2167c94d6302e4c3c310828958d9634631b7a5be55bcb4aedf3f3bc36e364e0371ca307b53ca548f2713e4024d72e1",
+          "sha256": "7a209a0a5d0121eed94a53337d35112dfc6985b5304c1b88b4e1414455c860f1",
+          "sha1": "630cff3c93943c4c7c1699de5ee422e34c8cc38c",
+          "md5": "839009f40263b51ecea3dde871d4719b"
         }
       ]
     },
@@ -74,17 +74,17 @@
       },
       "dependencies": [
         {
-          "group": "androidx.compose.runtime",
-          "module": "runtime-dispatch",
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
           "version": {
-            "requires": "1.0.0-alpha11"
+            "requires": "1.4.30"
           }
         },
         {
           "group": "org.jetbrains.kotlin",
           "module": "kotlin-stdlib-common",
           "version": {
-            "requires": "1.4.21"
+            "requires": "1.4.30"
           }
         },
         {
@@ -104,13 +104,13 @@
       ],
       "files": [
         {
-          "name": "runtime-js-1.0.0-alpha11.klib",
-          "url": "runtime-js-1.0.0-alpha11.klib",
-          "size": 584855,
-          "sha512": "287cb6f26a19c28b1946f0fa8ec03bff0b58e820d2c803687854a709e52336a725e232038cb9ab630d8e3240532bc662d2053c951b2adf906b774085693b9da2",
-          "sha256": "6b9d015c8e30a02a3f2a4e951fe5643289cf2a547049dc8e91b10d3b71e1b263",
-          "sha1": "f62e69f113c91e27c062724217d1969cf5e18729",
-          "md5": "8c44d9d87aa691fbd15c516ea7111806"
+          "name": "runtime-js-1.0.0-alpha13.klib",
+          "url": "runtime-js-1.0.0-alpha13.klib",
+          "size": 546234,
+          "sha512": "ef1111df55fbe3c163c232339016950a2a2167c94d6302e4c3c310828958d9634631b7a5be55bcb4aedf3f3bc36e364e0371ca307b53ca548f2713e4024d72e1",
+          "sha256": "7a209a0a5d0121eed94a53337d35112dfc6985b5304c1b88b4e1414455c860f1",
+          "sha1": "630cff3c93943c4c7c1699de5ee422e34c8cc38c",
+          "md5": "839009f40263b51ecea3dde871d4719b"
         }
       ]
     },
@@ -121,10 +121,10 @@
         "org.jetbrains.kotlin.platform.type": "common"
       },
       "available-at": {
-        "url": "../../runtime-metadata/1.0.0-alpha11/runtime-metadata-1.0.0-alpha11.module",
+        "url": "../../runtime-metadata/1.0.0-alpha13/runtime-metadata-1.0.0-alpha13.module",
         "group": "androidx.compose.runtime",
         "module": "runtime-metadata",
-        "version": "1.0.0-alpha11"
+        "version": "1.0.0-alpha13"
       }
     }
   ]
