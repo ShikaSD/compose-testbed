@@ -1,7 +1,6 @@
 package compose.web
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.emptyContent
 
 @Composable
 fun h1(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
@@ -19,16 +18,16 @@ fun button(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
 }
 
 @Composable
-fun input(modifier: Modifier = Modifier, content: @Composable() () -> Unit = emptyContent()) {
+fun input(modifier: Modifier = Modifier, content: @Composable() () -> Unit = {}) {
     tag(modifier, "input", content = content)
 }
 
 @Composable
 fun canvas(modifier: Modifier = Modifier, width: Int, height: Int) {
-    tag(modifier = modifier.width(width).height(height), tagName = "canvas", content = emptyContent())
+    tag(modifier = modifier.width(width).height(height), tagName = "canvas", content = {})
 }
 
 @Composable
 fun br() {
-    tag(modifier = Modifier, tagName = "br", content = emptyContent())
+    tag(modifier = Modifier, tagName = "br", content = {})
 }

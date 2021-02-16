@@ -57,11 +57,11 @@
         {
           "name": "runtime-js-1.0.0-alpha13.klib",
           "url": "runtime-js-1.0.0-alpha13.klib",
-          "size": 546234,
-          "sha512": "ef1111df55fbe3c163c232339016950a2a2167c94d6302e4c3c310828958d9634631b7a5be55bcb4aedf3f3bc36e364e0371ca307b53ca548f2713e4024d72e1",
-          "sha256": "7a209a0a5d0121eed94a53337d35112dfc6985b5304c1b88b4e1414455c860f1",
-          "sha1": "630cff3c93943c4c7c1699de5ee422e34c8cc38c",
-          "md5": "839009f40263b51ecea3dde871d4719b"
+          "size": 565666,
+          "sha512": "d758705a77675c1218b2d67af4a584fcfa5a406eb170577e6c86bb260beed61acccad3eac7b80cc225fdd2c282ad7d08271e47f9ce41ef78f3035147ea1f11b4",
+          "sha256": "a2b4c9ffa77ccc10c768e9c8c9869750c87c0e9238dec776661367e565cde6a4",
+          "sha1": "32809ef03ebc6aa35c9686b724c5ebb5091c0c6d",
+          "md5": "4dfbabe5bd86025e4e349458cf68f9f7"
         }
       ]
     },
@@ -106,11 +106,11 @@
         {
           "name": "runtime-js-1.0.0-alpha13.klib",
           "url": "runtime-js-1.0.0-alpha13.klib",
-          "size": 546234,
-          "sha512": "ef1111df55fbe3c163c232339016950a2a2167c94d6302e4c3c310828958d9634631b7a5be55bcb4aedf3f3bc36e364e0371ca307b53ca548f2713e4024d72e1",
-          "sha256": "7a209a0a5d0121eed94a53337d35112dfc6985b5304c1b88b4e1414455c860f1",
-          "sha1": "630cff3c93943c4c7c1699de5ee422e34c8cc38c",
-          "md5": "839009f40263b51ecea3dde871d4719b"
+          "size": 565666,
+          "sha512": "d758705a77675c1218b2d67af4a584fcfa5a406eb170577e6c86bb260beed61acccad3eac7b80cc225fdd2c282ad7d08271e47f9ce41ef78f3035147ea1f11b4",
+          "sha256": "a2b4c9ffa77ccc10c768e9c8c9869750c87c0e9238dec776661367e565cde6a4",
+          "sha1": "32809ef03ebc6aa35c9686b724c5ebb5091c0c6d",
+          "md5": "4dfbabe5bd86025e4e349458cf68f9f7"
         }
       ]
     },

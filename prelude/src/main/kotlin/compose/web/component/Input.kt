@@ -2,7 +2,6 @@ package compose.web.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.emptyContent
 import androidx.compose.runtime.mutableStateOf
 import compose.web.Modifier
 import compose.web.event
@@ -25,7 +24,7 @@ fun Checkbox(modifier: Modifier = Modifier, state: CheckboxState) {
                 state.value = (it.target as HTMLInputElement).checked
             }),
         tagName = "input",
-        content = emptyContent()
+        content = {}
     )
 }
 
@@ -42,6 +41,6 @@ fun TextInput(modifier: Modifier = Modifier, state: InputState) {
                 state.value = (it.target as HTMLInputElement).value
             },
         tagName = "input",
-        content = emptyContent()
+        content = {}
     )
 }

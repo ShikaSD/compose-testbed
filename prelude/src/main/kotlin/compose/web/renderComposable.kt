@@ -20,7 +20,6 @@ fun renderComposable(root: HTMLElement, content: @Composable () -> Unit): Compos
     val context = DefaultMonotonicFrameClock + Dispatchers.Main
     val recomposer = Recomposer(context)
     val composition = Composition(
-        key = 0,
         applier = JsApplier(root),
         parent = recomposer
     )
