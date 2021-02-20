@@ -13,7 +13,7 @@ fun RepositoryHandler.libsRepository(rootDir: File) {
     maven(url = File(rootDir, "libs").toURI())
 }
 
-fun DependencyHandlerScope.composeRuntimeJs(): Dependency = create("androidx.compose.runtime:runtime-js:1.0.0-alpha13")
+fun DependencyHandlerScope.composeRuntimeJs(): Dependency = create("androidx.compose.runtime:runtime-js:1.0.0-beta02")
 
 fun Project.configureComposeCompiler() {
     dependencies {

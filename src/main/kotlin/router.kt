@@ -3,6 +3,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import compose.web.Modifier
 import compose.web.button
@@ -46,7 +47,7 @@ interface Router {
     class Params : Map<String, String> by mapOf()
 
     companion object {
-        val local = compositionLocalOf<Router> { RouterImpl() }
+        val local = compositionLocalOf<Router> { error("Default router") }
     }
 }
 
@@ -66,9 +67,9 @@ class RouterDefinition {
 @Composable
 fun Router(definition: RouterDefinition.() -> Unit) {
     val router = currentRouter() as RouterImpl
-    val newRouter = router.configure(definition)
+    val newRouter = remember(router, definition) { router.configure(definition) }
     CompositionLocalProvider(Router.local provides newRouter) {
-        router.current()
+        newRouter.current()
     }
 }
 
@@ -78,15 +79,18 @@ fun currentRouter(): Router =
 
 @Composable
 fun test() {
-    Router {
-        route("/") {
-            Root()
-        }
-        route("/profile") {
-            Profile()
-        }
-        route("/messages") {
-            Messages()
+    val emptyRouter = remember { RouterImpl() }
+    CompositionLocalProvider(Router.local provides emptyRouter) {
+        Router {
+            route("/") {
+                Root()
+            }
+            route("/profile") {
+                Profile()
+            }
+            route("/messages") {
+                Messages()
+            }
         }
     }
 }

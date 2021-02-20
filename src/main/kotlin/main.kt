@@ -10,7 +10,7 @@ import kotlin.time.measureTime
 
 fun main() {
     renderComposable(document.body!!) {
-        App()
+        test()
     }
 }
 
