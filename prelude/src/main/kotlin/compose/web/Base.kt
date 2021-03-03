@@ -29,4 +29,3 @@ fun text(value: String) {
         },
     )
 }
-
