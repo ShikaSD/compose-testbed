@@ -113,19 +113,6 @@
           "md5": "e28611e8e7259e8f1e981cfacdb90532"
         }
       ]
-    },
-    {
-      "name": "metadataApiElements-published",
-      "attributes": {
-        "org.gradle.usage": "kotlin-api",
-        "org.jetbrains.kotlin.platform.type": "common"
-      },
-      "available-at": {
-        "url": "../../runtime-metadata/1.0.0-beta02/runtime-metadata-1.0.0-beta02.module",
-        "group": "androidx.compose.runtime",
-        "module": "runtime-metadata",
-        "version": "1.0.0-beta02"
-      }
     }
   ]
 }
