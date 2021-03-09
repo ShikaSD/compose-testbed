@@ -18,7 +18,7 @@ fun button(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
 }
 
 @Composable
-fun input(modifier: Modifier = Modifier, content: @Composable() () -> Unit = {}) {
+fun input(modifier: Modifier = Modifier, content: @Composable () -> Unit = {}) {
     tag(modifier, "input", content = content)
 }
 
@@ -30,4 +30,24 @@ fun canvas(modifier: Modifier = Modifier, width: Int, height: Int) {
 @Composable
 fun br() {
     tag(modifier = Modifier, tagName = "br", content = {})
+}
+
+@Composable
+fun hr() {
+    tag(modifier = Modifier, tagName = "hr", content = {})
+}
+
+@Composable
+fun ul(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    tag(modifier = modifier, tagName = "ul", content)
+}
+
+@Composable
+fun li(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    tag(modifier = modifier, tagName = "li", content)
+}
+
+@Composable
+fun a(modifier: Modifier = Modifier, content: @Composable() () -> Unit) {
+    tag(modifier = modifier, tagName = "a", content)
 }
