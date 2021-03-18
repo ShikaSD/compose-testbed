@@ -21,6 +21,8 @@ Prebuilt artifacts are generated from CRs in aosp repo (
 [two](https://android-review.googlesource.com/c/platform/frameworks/support/+/1535139)
 ). I will try to keep them in sync while it makes sense.
 
+Currently these artifacts are not published anywhere, but you can use [this template](https://github.com/ShikaSD/compose-browser-external-template) to include it in other projects.
+
 ## See also
 
 - [Compose/JS from JB hackathon](https://github.com/JetBrains/compose-for-web-demos)
