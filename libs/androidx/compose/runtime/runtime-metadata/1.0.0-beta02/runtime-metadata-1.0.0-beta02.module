@@ -1,0 +1,38 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../runtime-macos/1.0.0-beta02/runtime-macos-1.0.0-beta02.module",
+    "group": "androidx.compose.runtime",
+    "module": "runtime-macos",
+    "version": "1.0.0-beta02",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.1",
+      "buildId:": "0"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "runtime-metadata-1.0.0-beta02.jar",
+          "url": "runtime-metadata-1.0.0-beta02.jar",
+          "size": 87648,
+          "sha512": "18a45d414afd61686c35672ff6c578662d144a016726bc130e4908cd48d6c1b079251be295e5ef80b51e03cd9cc98e68dec76a257ea9dae82c5cf6c2796ddb75",
+          "sha256": "78e452be98190b35573ca4b1a35a3670d51beb6e3fe12822fb6f0beea0ae9acd",
+          "sha1": "2ece4c61e025176bceda315f604c1fa5d896f19b",
+          "md5": "ad886c659f722b2dcadc8f84664ee726"
+        }
+      ]
+    }
+  ]
+}
