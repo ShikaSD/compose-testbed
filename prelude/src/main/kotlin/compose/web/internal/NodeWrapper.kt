@@ -45,38 +45,27 @@ internal class NodeWrapper internal constructor(internal val realNode: Node) {
     fun insert(index: Int, instance: NodeWrapper) {
         if (realNode !is Element) throw IllegalStateException("Cannot add elements to $realNode")
 
-        if (index == realNode.children.length) {
-            realNode.appendChild(instance.realNode)
-        } else {
-            realNode.insertBefore(
-                instance.realNode,
-                realNode.childNodes[index]
-            )
-        }
+        realNode.insertBefore(instance.realNode, realNode.childNodes[index])
     }
 
     fun remove(index: Int, count: Int) {
+        if (realNode !is Element) throw IllegalStateException("Cannot remove elements from $realNode")
+
         repeat(count) {
-            val removed = realNode.childNodes[index]!!
-            realNode.removeChild(removed)
+            realNode.removeChild(realNode.childNodes[index]!!)
         }
     }
 
     fun move(from: Int, to: Int, count: Int) {
-        // todo: simplify (copied from server-side project for now)
+        if (realNode !is Element) throw IllegalStateException("Cannot move elements in $realNode")
+
         if (from > to) {
-            var next = to
             repeat(count) {
-                val node = realNode.childNodes[from]!!
-                realNode.removeChild(node)
-                realNode.insertBefore(realNode.childNodes[next]!!, node)
-                next++
+                realNode.insertBefore(realNode.childNodes[from + it]!!, realNode.childNodes[to + it])
             }
         } else {
             repeat(count) {
-                val node = realNode.childNodes[from]!!
-                realNode.removeChild(node)
-                realNode.insertBefore(realNode.childNodes[to - 1]!!, node)
+                realNode.insertBefore(realNode.childNodes[from]!!, realNode.childNodes[to])
             }
         }
     }
