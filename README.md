@@ -26,4 +26,4 @@ Currently these artifacts are not published anywhere, but you can use [this temp
 ## See also
 
 - [Compose/JS from JB hackathon](https://github.com/JetBrains/compose-for-web-demos)
-
+- [Compose/Web branch in Jetbrains fork of Compose](https://github.com/JetBrains/androidx/tree/compose-web-main)
