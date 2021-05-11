@@ -1,4 +1,4 @@
-# Compose browser demos
+# If you are here, most probably you are looking for [official Compose for Web implementation](https://github.com/JetBrains/compose-jb/tree/master/tutorials/Web/Getting_Started). This repo is only used for my own testing purposes now :)
 
 This is a demo of Compose running in the browser using Kotlin/JS and original compiler.
 The API here is not representative of anything final (actually, almost non-existent), so feel free to play with it and come up with anything on your own.
