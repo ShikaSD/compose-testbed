@@ -9,6 +9,7 @@ Compiler plugin is **NOT QUITE STABLE** yet, if you encounter any bugs/crashes, 
 ## Where to look?
 
 - [`.`](./src/main/kotlin) - Playground
+- [`macTest`](./macTest/src/main/kotlin/) - Mac OS playground
 - [`prelude`](./prelude/src/main/kotlin/compose/web) - Some basic HTML definitions
 - [`libs`](./libs/) - Prebuilt artifacts of runtime and compiler plugin
 
