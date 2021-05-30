@@ -45,7 +45,7 @@ internal class NodeWrapper internal constructor(internal val realNode: Node) {
     fun insert(index: Int, instance: NodeWrapper) {
         if (realNode !is Element) throw IllegalStateException("Cannot add elements to $realNode")
 
-        if (index == realNode.children.length) {
+        if (index >= realNode.children.length) {
             realNode.appendChild(instance.realNode)
         } else {
             realNode.insertBefore(

@@ -12,20 +12,23 @@ import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
 fun main() {
-    renderComposable(document.body!!) {
-        App()
-    }
-//    val duration = Benchmark(content = {
-//        tag(Modifier, "div") {
-//            for (i in 0 until 1000) {
-//                tag(Modifier, "div") {
-//                    text("$it")
-//                }
-//            }
+//    renderComposable(document.body!!) {
+//        App()
+//        FooTyped<String>().apply {
+//            this.l()
 //        }
-//    })
-//
-//    println(duration)
+//    }
+    val duration = Benchmark(content = {
+        tag(Modifier, "div") {
+            for (i in 0 until 1000) {
+                tag(Modifier, "div") {
+                    text("$it")
+                }
+            }
+        }
+    })
+
+    println(duration)
 }
 
 @Composable
@@ -38,14 +41,14 @@ fun TestRange(to: Int) {
 }
 
 @OptIn(ExperimentalTime::class)
-fun Benchmark(content: @Composable (round: Int) -> Unit, rounds: Int = 100): Duration {
+fun Benchmark(content: @Composable (round: Int) -> Unit, rounds: Int = 1): Duration {
     val composition = renderComposable(document.body!!) {}
 
     var duration = Duration.ZERO
     for (i in 0 until rounds) {
         duration += measureTime {
             composition.setContent { content(i) }
-            composition.setContent { }
+//            composition.setContent { }
         }
     }
     return duration / rounds

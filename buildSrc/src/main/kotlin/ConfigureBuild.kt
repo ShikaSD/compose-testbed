@@ -6,6 +6,7 @@ import org.gradle.kotlin.dsl.findByType
 import org.gradle.kotlin.dsl.maven
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinSingleTargetExtension
+import org.jetbrains.kotlin.gradle.plugin.KotlinPlatformType
 import org.jetbrains.kotlin.gradle.plugin.KotlinTarget
 import java.io.File
 
@@ -13,8 +14,8 @@ fun RepositoryHandler.libsRepository(rootDir: File) {
     maven(url = File(rootDir, "libs").toURI())
 }
 
-fun Project.composeRuntimeJs(): Dependency = dependencies.create("androidx.compose.runtime:runtime-js:1.0.0-beta02")
-fun Project.composeRuntimeMacOs(): Dependency = dependencies.create("androidx.compose.runtime:runtime-macos:1.0.0-beta02")
+fun Project.composeRuntimeJs(): Dependency = dependencies.create("androidx.compose.runtime:runtime-js:1.0.0-beta04")
+fun Project.composeRuntimeMacOs(): Dependency = dependencies.create("androidx.compose.runtime:runtime-macos:1.0.0-beta08")
 
 fun Project.configureComposeCompiler() {
     dependencies {
@@ -26,7 +27,7 @@ fun Project.configureComposeCompiler() {
         target.compilations.configureEach {
             kotlinOptions.freeCompilerArgs += listOf(
                 "-Xopt-in=kotlin.RequiresOptIn",
-//                "-P", "plugin:androidx.compose.compiler.plugins.kotlin:generateDecoys=true",
+                "-P", "plugin:androidx.compose.compiler.plugins.kotlin:generateDecoys=true",
                 "-P", "plugin:androidx.compose.compiler.plugins.kotlin:suppressKotlinVersionCompatibilityCheck=true"
             )
         }
@@ -34,10 +35,14 @@ fun Project.configureComposeCompiler() {
 
     extensions.findByType<KotlinMultiplatformExtension>()?.apply {
         targets.configureEach {
-            configure(this)
+            if (platformType == KotlinPlatformType.js) {
+                configure(this)
+            }
         }
     }
     extensions.findByType<KotlinSingleTargetExtension>()?.apply {
-        configure(target)
+        if (target.platformType == KotlinPlatformType.js) {
+            configure(target)
+        }
     }
 }

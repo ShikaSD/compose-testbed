@@ -1,3 +1,5 @@
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.yield
 import mock.Linear
@@ -7,14 +9,18 @@ import mock.View
 fun main() {
     runBlocking {
         val rootView = View()
+        val s = staticCompositionLocalOf { "" }
+
         val composition = renderComposable(rootView) {
-            Linear {
-                Text("edit")
+            CompositionLocalProvider(s provides "t") {
+                Linear(0) {
+                    Text("edit yo ${s.current}")
+                }
             }
         }
         println(rootView.children)
         composition.setContent {
-            Linear {
+            Linear(1) {
                 Text("edit")
                 Text("test")
                 Text("test1")
@@ -24,3 +30,4 @@ fun main() {
         println(rootView.children)
     }
 }
+

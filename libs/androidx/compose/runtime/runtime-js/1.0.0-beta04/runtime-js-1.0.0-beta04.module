@@ -1,10 +1,10 @@
 {
   "formatVersion": "1.1",
   "component": {
-    "url": "../../runtime/1.0.0-beta02/runtime-1.0.0-beta02.module",
+    "url": "../../runtime/1.0.0-beta04/runtime-1.0.0-beta04.module",
     "group": "androidx.compose.runtime",
     "module": "runtime",
-    "version": "1.0.0-beta02",
+    "version": "1.0.0-beta04",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -55,13 +55,13 @@
       ],
       "files": [
         {
-          "name": "runtime-js-1.0.0-beta02.klib",
-          "url": "runtime-js-1.0.0-beta02.klib",
-          "size": 568233,
-          "sha512": "b92c668183eb112cc4c49bb2514f5d990385a5aef448dddfc7b6acc984f497f5424f80c387bbecb16081454c67940457dac9e26130e166f7aa468674f7bd6f2e",
-          "sha256": "14fa5502ccc587159945435ddf776bee78e82cfc985f4bd8dbf532bdd7bdfda5",
-          "sha1": "6b4b26de2cf8071f1de0f1b0b59d680673bfb8f9",
-          "md5": "9d6dbdad61464286917a32b4685ff870"
+          "name": "runtime-js-1.0.0-beta04.klib",
+          "url": "runtime-js-1.0.0-beta04.klib",
+          "size": 579874,
+          "sha512": "5b54ecf5090aabf88d1d0020d9f54f62779c63707d4601ac9739726a72ff2290dca7a62973f8c4f406e713a6996e2747d53974096ec18919ccad9315dd7ba037",
+          "sha256": "fd4b5b3c648bfce22d65a7166ef0c5f4ab984dd0d9967b0a4e78eec1455ed891",
+          "sha1": "7d0bf705d7f007540557e13003c788b919d20488",
+          "md5": "d853d3ec4b7a89c1c875a3296aacbd0a"
         }
       ]
     },
@@ -104,13 +104,13 @@
       ],
       "files": [
         {
-          "name": "runtime-js-1.0.0-beta02.klib",
-          "url": "runtime-js-1.0.0-beta02.klib",
-          "size": 568233,
-          "sha512": "b92c668183eb112cc4c49bb2514f5d990385a5aef448dddfc7b6acc984f497f5424f80c387bbecb16081454c67940457dac9e26130e166f7aa468674f7bd6f2e",
-          "sha256": "14fa5502ccc587159945435ddf776bee78e82cfc985f4bd8dbf532bdd7bdfda5",
-          "sha1": "6b4b26de2cf8071f1de0f1b0b59d680673bfb8f9",
-          "md5": "9d6dbdad61464286917a32b4685ff870"
+          "name": "runtime-js-1.0.0-beta04.klib",
+          "url": "runtime-js-1.0.0-beta04.klib",
+          "size": 579874,
+          "sha512": "5b54ecf5090aabf88d1d0020d9f54f62779c63707d4601ac9739726a72ff2290dca7a62973f8c4f406e713a6996e2747d53974096ec18919ccad9315dd7ba037",
+          "sha256": "fd4b5b3c648bfce22d65a7166ef0c5f4ab984dd0d9967b0a4e78eec1455ed891",
+          "sha1": "7d0bf705d7f007540557e13003c788b919d20488",
+          "md5": "d853d3ec4b7a89c1c875a3296aacbd0a"
         }
       ]
     }

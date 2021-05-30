@@ -34,9 +34,9 @@ fun <T : Any> Repeated(
 }
 
 @Composable
-fun Linear(content: @Composable () -> Unit) {
+fun Linear(int: Int, content: @Composable () -> Unit) {
     ComposeNode<View, ViewApplier>(
-        factory = { View().also { it.name = "linear" } },
+        factory = { View().also { it.name = "linear$int" } },
         update = { }
     ) {
         content()

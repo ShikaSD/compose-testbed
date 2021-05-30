@@ -1,6 +1,7 @@
 package compose.web
 
 import androidx.compose.runtime.Composable
+import org.w3c.dom.HTMLLinkElement
 
 @Composable
 fun h1(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
@@ -48,6 +49,17 @@ fun li(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
 }
 
 @Composable
-fun a(modifier: Modifier = Modifier, content: @Composable() () -> Unit) {
-    tag(modifier = modifier, tagName = "a", content)
+fun a(modifier: Modifier = Modifier, href: String = "", content: @Composable () -> Unit) {
+    tag(modifier = modifier.property<HTMLLinkElement> { this.href = href }, tagName = "a", content)
 }
+
+@Composable
+fun div(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    tag(modifier = modifier, tagName = "div", content = content)
+}
+
+class Attr<T> {}
+@Composable
+fun <T> FooTyped(a: Attr<T>.() -> Unit = {}) {}
+
+val l: @Composable Any.() -> Unit = {}

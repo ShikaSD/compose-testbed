@@ -1,0 +1,55 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../runtime/1.0.0-beta08/runtime-1.0.0-beta08.module",
+    "group": "androidx.compose.runtime",
+    "module": "runtime",
+    "version": "1.0.0-beta08",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "macOSApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.4.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime.klib",
+          "url": "runtime-macos-1.0.0-beta08.klib",
+          "size": 852697,
+          "sha512": "ae8528762051ad94dd92ee8dfdf93398058278550e99fe138565a584b87e1ce79b352b01f11fedc82a8a9d52e14484d47dc6dead1d542f1e8e9cc5ebcdfb9548",
+          "sha256": "f05d687dec4cbef6522e776f6557f35797dd147310e3b0771393c69d101e4bf8",
+          "sha1": "509fa08f4a858555651c09109646b1977a72bb9c",
+          "md5": "c4d7ae1d79cbf7b4a8cfb26aea964b24"
+        }
+      ]
+    }
+  ]
+}
