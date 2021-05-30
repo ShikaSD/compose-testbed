@@ -1,10 +1,8 @@
 # Compose browser demos
 
-This is a demo of Compose running in the browser using Kotlin/JS and original compiler.
+This is a demo of Compose running in the browser using Kotlin/JS and Kotlin/Native with the original compiler.
 The API here is not representative of anything final (actually, almost non-existent), so feel free to play with it and come up with anything on your own.
 Compiler plugin is **NOT QUITE STABLE** yet, if you encounter any bugs/crashes, please report :).
-
-**NOTE:** this is not an "official" Compose/JS implementation from JB/Google, but just an example to play/experiment with.
 
 ## Where to look?
 
@@ -17,12 +15,13 @@ Inside of prelude, see [`JsApplier`](./prelude/src/main/kotlin/compose/web/inter
 
 ## Where's the prebuilts coming from?
 
-Prebuilt artifacts are generated from CRs in aosp repo (
-[one](https://android-review.googlesource.com/c/platform/frameworks/support/+/1535138), 
+Prebuilt artifacts for JS are generated from CLs in aosp repo (
+[one](https://android-review.googlesource.com/c/platform/frameworks/support/+/1535138),
 [two](https://android-review.googlesource.com/c/platform/frameworks/support/+/1535139)
 ). I will try to keep them in sync while it makes sense.
 
-Currently these artifacts are not published anywhere, but you can use [this template](https://github.com/ShikaSD/compose-browser-external-template) to include it in other projects.
+K/Native ones are built from this CL:
+https://android-review.googlesource.com/c/platform/frameworks/support/+/1685640/
 
 ## See also
 
