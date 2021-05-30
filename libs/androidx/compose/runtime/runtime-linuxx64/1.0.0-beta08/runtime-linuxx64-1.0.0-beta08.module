@@ -16,11 +16,11 @@
   },
   "variants": [
     {
-      "name": "macOSApiElements-published",
+      "name": "linuxX64ApiElements-published",
       "attributes": {
         "artifactType": "org.jetbrains.kotlin.klib",
         "org.gradle.usage": "kotlin-api",
-        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
         "org.jetbrains.kotlin.platform.type": "native"
       },
       "dependencies": [
@@ -42,12 +42,12 @@
       "files": [
         {
           "name": "runtime.klib",
-          "url": "runtime-macos-1.0.0-beta08.klib",
-          "size": 853206,
-          "sha512": "e3642652d6b1205092e79ad6b683f1d1223e0c078be70207baca0ceac92b728151020d7f0541d08786256ac077b0bcc769167cae43f7e6fd11c3f91ae44c95d7",
-          "sha256": "7cbc7bf394bd18aa4dee1830cae518d76ce40cf9b9b42dfbb33dee96076276b8",
-          "sha1": "a985d8f335167730efdb50724a725c44e7eee1d1",
-          "md5": "58e334d403716ef17f81d1e052402d6d"
+          "url": "runtime-linuxx64-1.0.0-beta08.klib",
+          "size": 853200,
+          "sha512": "ff2f1cd674d5acd4eb871ece4ece40c5524208cfef6e1354d983f3d775b5b16f33812bb30dd882540927b5a0324f48d701d98e983419590112b379f2fd114692",
+          "sha256": "9aa9db58a069c16f8ded2730d56838efd2a8bf3127bb2ad5c5e79cd6ad9cfa9c",
+          "sha1": "34a4719b2a028042de395add18bac4807cce2471",
+          "md5": "2daf7e87498ff3455c4000e53e519301"
         }
       ]
     }

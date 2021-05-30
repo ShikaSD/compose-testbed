@@ -7,7 +7,7 @@
   <!-- do_not_remove: published-with-gradle-metadata -->
   <modelVersion>4.0.0</modelVersion>
   <groupId>androidx.compose.runtime</groupId>
-  <artifactId>runtime-macos</artifactId>
+  <artifactId>runtime-iosx64</artifactId>
   <version>1.0.0-beta08</version>
   <packaging>klib</packaging>
   <name>Compose Runtime</name>
@@ -39,7 +39,7 @@
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlinx</groupId>
-      <artifactId>kotlinx-coroutines-core-macosx64</artifactId>
+      <artifactId>kotlinx-coroutines-core-iosx64</artifactId>
       <version>1.4.3</version>
       <scope>compile</scope>
     </dependency>
